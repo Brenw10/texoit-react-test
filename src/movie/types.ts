@@ -9,3 +9,8 @@ export interface IYearWinner {
   year: number;
   winnerCount: number;
 }
+
+export interface IStudios {
+  name: string;
+  winCount: number;
+}
