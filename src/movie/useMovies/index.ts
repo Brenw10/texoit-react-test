@@ -1,5 +1,5 @@
+import TexoItApi from "@/core/TexoItApi";
 import { useQuery } from "@tanstack/react-query"
-import axios from "axios";
 
 export interface IMoviesPayload {
   page: number;
@@ -12,7 +12,7 @@ export default function useMovies(payload: IMoviesPayload) {
   return useQuery({
     queryKey: ['movies', payload],
     queryFn: async () => {
-      const response = await axios.get('https://tools.texoit.com/backend-java/api/movies', { params: payload });
+      const response = await TexoItApi.get('/movies', { params: payload });
       return response.data;
     },
   });
