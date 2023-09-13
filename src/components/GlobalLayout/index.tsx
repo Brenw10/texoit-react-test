@@ -6,7 +6,9 @@ export default function GlobalLayout({ children }: { children: React.ReactNode }
     <div className="d-flex flex-column min-vh-100">
       <Header />
       <div className='d-flex flex-row flex-fill'>
-        <SideBar />
+        <div>
+          <SideBar />
+        </div>
         <div className='p-2 flex-fill'>
           {children}
         </div>

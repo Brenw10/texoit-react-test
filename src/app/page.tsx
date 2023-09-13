@@ -1,7 +1,9 @@
+import GlobalLayout from "@/components/GlobalLayout";
+
 export default function Home() {
   return (
-    <div>
+    <GlobalLayout>
       Dashboard
-    </div>
+    </GlobalLayout>
   )
 }
