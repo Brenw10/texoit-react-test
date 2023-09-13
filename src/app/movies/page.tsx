@@ -1,5 +1,9 @@
+import GlobalLayout from "@/components/GlobalLayout";
+
 export default function Movies() {
   return (
-    <div>Movies</div>
+    <GlobalLayout>
+      <div>Movies</div>
+    </GlobalLayout>
   )
 }
