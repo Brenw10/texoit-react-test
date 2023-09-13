@@ -1,13 +1,11 @@
 'use client'
 
-import { Navbar, Container } from "react-bootstrap";
+import { Navbar } from "react-bootstrap";
 
 export default function GlobalHeader() {
   return (
-    <Navbar className="bg-body-tertiary" data-bs-theme="dark">
-      <Container>
-        <Navbar.Brand href="/">Frontend React Test</Navbar.Brand>
-      </Container>
+    <Navbar className="bg-body-tertiary px-3" data-bs-theme="dark">
+      <Navbar.Brand href="/">Frontend React Test</Navbar.Brand>
     </Navbar>
   )
 }
