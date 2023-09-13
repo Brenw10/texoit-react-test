@@ -1,8 +1,9 @@
 import TexoItApi from "@/core/TexoItApi";
 import { useQuery } from "@tanstack/react-query"
+import { IMovie } from "../types";
 
 export default function useYearWinner(year: number | string) {
-  return useQuery({
+  return useQuery<IMovie[]>({
     enabled: Boolean(year),
     queryKey: ['year-winner', year],
     queryFn: async () => {
