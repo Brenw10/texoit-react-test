@@ -6,15 +6,17 @@ import { IMovie } from '../types';
 import { PaginationControl } from 'react-bootstrap-pagination-control';
 import { useState } from 'react';
 import styles from './style.module.css'
+import { useDebounce } from '@uidotdev/usehooks';
 
 export default function MovieTable() {
   const [filters, setFilters] = useState<IMoviesPayload>({ page: 0, size: 15 });
+  const debouncedFilters = useDebounce(filters, 500);
   const {
     data: {
       content = [],
       totalElements = 0,
     } = {},
-  } = useMovies(filters);
+  } = useMovies(debouncedFilters);
 
   return (
     <>
@@ -37,6 +39,7 @@ export default function MovieTable() {
               <Form.Select
                 aria-label="Yes/No"
                 placeholder='Yes/No'
+                value={filters.winner}
                 size='sm'
                 onChange={(e) => setFilters({ ...filters, winner: e.target.value, page: 0 })}
               >
