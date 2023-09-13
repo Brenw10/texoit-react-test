@@ -11,7 +11,7 @@ import styles from './page.module.css';
 export default function Home() {
   return (
     <GlobalLayout>
-      <div className="d-flex flex-row gap-3 flex-wrap">
+      <div className={`d-flex gap-3 flex-wrap ${styles.row}`}>
         <div className={`d-flex flex-column gap-3 ${styles.column}`}>
           <Card>
             <Card.Body>
