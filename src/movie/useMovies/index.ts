@@ -8,7 +8,7 @@ export interface IPayload {
 
 export default function useMovies(payload: IPayload) {
   return useQuery({
-    queryKey: ['movies'],
+    queryKey: ['movies', payload],
     queryFn: async () => {
       const response = await axios.get('https://tools.texoit.com/backend-java/api/movies', { params: payload });
       return response.data;
