@@ -10,8 +10,8 @@ export default function SideBar() {
   return (
     <Navbar expand="lg" className={`bg-body-tertiary h-100 align-items-start ${styles.navbar}`} data-bs-theme="light">
       <Container>
-        <Nav className="flex-column" activeKey={pathname}>
-          <Nav.Link eventKey='/' href="/">Dashboard</Nav.Link>
+        <Nav className={`flex-column ${styles.nav}`} activeKey={pathname}>
+          <Nav.Link eventKey='/' href="/" color='blue'>Dashboard</Nav.Link>
           <Nav.Link eventKey='/movies' href="/movies">List</Nav.Link>
         </Nav>
       </Container>
