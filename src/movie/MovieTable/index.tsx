@@ -40,6 +40,7 @@ export default function MovieTable() {
                 size='sm'
                 onChange={(e) => setFilters({ ...filters, winner: e.target.value, page: 0 })}
               >
+                <option value="">Yes/No</option>
                 <option value="true">Yes</option>
                 <option value="false">No</option>
               </Form.Select>
