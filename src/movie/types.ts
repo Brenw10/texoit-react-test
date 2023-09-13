@@ -4,3 +4,8 @@ export interface IMovie {
   winner: boolean;
   year: number;
 };
+
+export interface IYearWinner {
+  year: number;
+  winnerCount: number;
+}
