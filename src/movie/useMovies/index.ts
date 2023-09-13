@@ -1,12 +1,13 @@
 import { useQuery } from "@tanstack/react-query"
 import axios from "axios";
 
-export interface IPayload {
+export interface IMoviesPayload {
   page: number;
   size: number;
+  year?: string;
 };
 
-export default function useMovies(payload: IPayload) {
+export default function useMovies(payload: IMoviesPayload) {
   return useQuery({
     queryKey: ['movies', payload],
     queryFn: async () => {

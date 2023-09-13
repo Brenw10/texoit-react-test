@@ -1,29 +1,36 @@
 'use client'
 
-import { Table } from 'react-bootstrap';
-import useMovies from '../useMovies';
+import { Table, Form } from 'react-bootstrap';
+import useMovies, { IMoviesPayload } from '../useMovies';
 import { IMovie } from '../types';
 import { PaginationControl } from 'react-bootstrap-pagination-control';
 import { useState } from 'react';
-
-const SIZE = 15;
+import styles from './style.module.css'
 
 export default function MovieTable() {
-  const [page, setPage] = useState(1);
+  const [filters, setFilters] = useState<IMoviesPayload>({ page: 0, size: 15 });
   const {
     data: {
       content = [],
       totalElements = 0,
     } = {},
-  } = useMovies({ page: page - 1, size: SIZE });
+  } = useMovies(filters);
 
   return (
     <>
-      <Table striped bordered hover>
+      <Table striped bordered hover className={styles.table}>
         <thead>
           <tr>
             <th>ID</th>
-            <th>Year</th>
+            <th>
+              Year
+              <Form.Control
+                type="text"
+                placeholder="Filter by year"
+                onChange={(e) => setFilters({ ...filters, year: e.target.value, page: 0 })}
+                value={filters.year || ''}
+              />
+            </th>
             <th>Title</th>
             <th>Winner?</th>
           </tr>
@@ -40,11 +47,11 @@ export default function MovieTable() {
         </tbody>
       </Table>
       <PaginationControl
-        page={page}
+        page={filters.page + 1}
         between={2}
         total={totalElements}
-        limit={SIZE}
-        changePage={setPage}
+        limit={filters.size}
+        changePage={(page) => setFilters({ ...filters, page: page - 1 })}
         ellipsis={1}
         last
       />
