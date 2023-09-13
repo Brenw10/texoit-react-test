@@ -23,10 +23,10 @@ export default function MinMaxWinIntervalTable() {
         <tbody>
           {max.length > 0 && (
             <tr>
-              <td>{max.at(0).producer}</td>
-              <td>{max.at(0).interval}</td>
-              <td>{max.at(0).previousWin}</td>
-              <td>{max.at(0).followingWin}</td>
+              <td>{max[0].producer}</td>
+              <td>{max[0].interval}</td>
+              <td>{max[0].previousWin}</td>
+              <td>{max[0].followingWin}</td>
             </tr>
           )}
         </tbody>
@@ -44,10 +44,10 @@ export default function MinMaxWinIntervalTable() {
         <tbody>
           {min.length > 0 && (
             <tr>
-              <td>{min.at(0).producer}</td>
-              <td>{min.at(0).interval}</td>
-              <td>{min.at(0).previousWin}</td>
-              <td>{min.at(0).followingWin}</td>
+              <td>{min[0].producer}</td>
+              <td>{min[0].interval}</td>
+              <td>{min[0].previousWin}</td>
+              <td>{min[0].followingWin}</td>
             </tr>
           )}
         </tbody>
