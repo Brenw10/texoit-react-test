@@ -1,13 +1,13 @@
 'use client'
 
 import { Table } from 'react-bootstrap';
-import useMultipleYearsWinner from '../useMultipleYearsWinner';
+import useMultipleYearsWinners from '../useMultipleYearsWinners';
 import { IYearWinner } from '../types';
 
 export default function YearsWinnersTable() {
   const {
     data: { years = [] } = {},
-  } = useMultipleYearsWinner();
+  } = useMultipleYearsWinners();
 
   return (
     <Table striped bordered hover>
