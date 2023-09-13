@@ -31,6 +31,7 @@ export default function MovieTable() {
                 placeholder="Filter by year"
                 onChange={(e) => setFilters({ ...filters, year: e.target.value, page: 0 })}
                 value={filters.year || ''}
+                maxLength={50}
               />
             </th>
             <th>Title</th>
