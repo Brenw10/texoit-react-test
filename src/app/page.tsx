@@ -6,12 +6,13 @@ import TopStudiosTable from "@/movie/TopStudiosTable";
 import MultipleYearsWinnersTable from "@/movie/MultipleYearsWinnersTable";
 import YearWinnerTable from "@/movie/YearWinnerTable";
 import { Card } from 'react-bootstrap';
+import styles from './page.module.css';
 
 export default function Home() {
   return (
     <GlobalLayout>
-      <div className="d-flex flex-row gap-3">
-        <div className="w-100 d-flex flex-column gap-3">
+      <div className="d-flex flex-row gap-3 flex-wrap">
+        <div className={`d-flex flex-column gap-3 ${styles.column}`}>
           <Card>
             <Card.Body>
               <h2 className="h4">List years with multiple winners</h2>
@@ -25,7 +26,7 @@ export default function Home() {
             </Card.Body>
           </Card>
         </div>
-        <div className="w-100 d-flex flex-column gap-3">
+        <div className={`d-flex flex-column gap-3 ${styles.column}`}>
           <Card>
             <Card.Body>
               <h2 className="h4">Top 3 studios with winners</h2>
