@@ -32,7 +32,18 @@ export default function MovieTable() {
               />
             </th>
             <th>Title</th>
-            <th>Winner?</th>
+            <th>
+              Winner?
+              <Form.Select
+                aria-label="Yes/No"
+                placeholder='Yes/No'
+                size='sm'
+                onChange={(e) => setFilters({ ...filters, winner: e.target.value, page: 0 })}
+              >
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+              </Form.Select>
+            </th>
           </tr>
         </thead>
         <tbody>

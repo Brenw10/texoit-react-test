@@ -5,6 +5,7 @@ export interface IMoviesPayload {
   page: number;
   size: number;
   year?: string;
+  winner?: string;
 };
 
 export default function useMovies(payload: IMoviesPayload) {
