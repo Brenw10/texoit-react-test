@@ -1,12 +1,12 @@
 import GlobalLayout from "@/components/GlobalLayout";
 import MinMaxWinIntervalTable from "@/movie/MinMaxWinIntervalTable";
 import TopStudiosTable from "@/movie/TopStudiosTable";
-import YearsWinnersTable from "@/movie/YearsWinnersTable";
+import MultipleYearsWinnersTable from "@/movie/MultipleYearsWinnersTable";
 
 export default function Home() {
   return (
     <GlobalLayout>
-      <YearsWinnersTable />
+      <MultipleYearsWinnersTable />
       <TopStudiosTable />
       <MinMaxWinIntervalTable />
     </GlobalLayout>

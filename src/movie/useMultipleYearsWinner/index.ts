@@ -1,7 +1,7 @@
 import TexoItApi from "@/core/TexoItApi";
 import { useQuery } from "@tanstack/react-query"
 
-export default function useYearsWinner() {
+export default function useMultipleYearsWinner() {
   return useQuery({
     queryKey: ['years-winners'],
     queryFn: async () => {
