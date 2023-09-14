@@ -8,7 +8,7 @@ import YearWinnerTable from "@/movie/YearWinnerTable";
 import { Card } from 'react-bootstrap';
 import styles from './page.module.css';
 
-export default function Home() {
+export default function Dashboard() {
   return (
     <GlobalLayout>
       <div className={`d-flex gap-3 flex-wrap ${styles.row}`}>
