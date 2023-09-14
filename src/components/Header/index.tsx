@@ -2,7 +2,7 @@
 
 import { Navbar } from "react-bootstrap";
 
-export default function GlobalHeader() {
+export default function Header() {
   return (
     <Navbar className="bg-body-tertiary px-3" data-bs-theme="dark">
       <Navbar.Brand href="/">Frontend React Test</Navbar.Brand>
