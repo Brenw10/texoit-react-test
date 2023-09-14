@@ -6,7 +6,7 @@ import { IMovie } from '../types';
 import { PaginationControl } from 'react-bootstrap-pagination-control';
 import { useState } from 'react';
 import styles from './style.module.css'
-import { useDebounce } from '@uidotdev/usehooks';
+import { useDebounce } from 'usehooks-ts';
 
 export default function MovieTable() {
   const [filters, setFilters] = useState<IMoviesPayload>({ page: 0, size: 15 });
