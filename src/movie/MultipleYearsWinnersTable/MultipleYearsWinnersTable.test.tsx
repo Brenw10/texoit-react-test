@@ -23,7 +23,6 @@ describe('testing MultipleYearsWinnersTable page', () => {
     const table = screen.getByRole('table');
     const tbody = table.querySelector('tbody');
     const rows = tbody!.querySelectorAll('tr');
-    console.log(rows)
     mock.years.forEach((item, index) => {
       const cells = rows[index].querySelectorAll('td');
       expect(cells[0].textContent).toBe(item.year.toString());
