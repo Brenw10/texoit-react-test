@@ -8,7 +8,12 @@ export default function SideBar() {
   const pathname = usePathname();
 
   return (
-    <Navbar expand="lg" className={`bg-body-tertiary h-100 align-items-start ${styles.navbar}`} data-bs-theme="light">
+    <Navbar
+      expand="lg"
+      className={`bg-body-tertiary h-100 align-items-start ${styles.navbar}`}
+      data-bs-theme="light"
+      data-testid='sidebar'
+    >
       <Container>
         <Nav className={`flex-column ${styles.nav}`} activeKey={pathname}>
           <Nav.Link eventKey='/' href="/" color='blue'>Dashboard</Nav.Link>
