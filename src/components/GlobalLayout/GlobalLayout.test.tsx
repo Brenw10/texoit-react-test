@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import GlobalLayout from '.';
 
-describe('testing sidebar component', () => {
+describe('testing global layout component', () => {
   beforeEach(() => {
     render(<GlobalLayout>Something</GlobalLayout>);
   });
