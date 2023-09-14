@@ -27,7 +27,7 @@ export default function YearWinnerTable() {
           onChange={(e) => setSearchField(e.target.value)}
           value={searchField}
         />
-        <Button type='submit'>
+        <Button type='submit' data-testid='search-button'>
           <Search />
         </Button>
       </form>
