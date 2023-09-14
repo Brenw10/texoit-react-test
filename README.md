@@ -15,7 +15,7 @@ npm run dev
 
 Just run `npm run test` to execute jest tests.
 
-If you want to execute a tests for a specific path or file execute the following code:
+If you want to execute tests for a specific path or file execute the following code:
 
 ```bash
 npm run test -- [PATH]
