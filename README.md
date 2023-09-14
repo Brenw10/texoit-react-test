@@ -1,5 +1,5 @@
 ## Pre-requisites
- - Node LTS version installed
+ - Node 18 installed
 
 ## Getting Started
 
