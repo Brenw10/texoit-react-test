@@ -4,7 +4,7 @@ import { Table } from 'react-bootstrap';
 import useMultipleYearsWinners from '../useMultipleYearsWinners';
 import { IYearWinner } from '../types';
 
-export default function YearsWinnersTable() {
+export default function MultipleYearsWinnersTable() {
   const {
     data: { years = [] } = {},
   } = useMultipleYearsWinners();
